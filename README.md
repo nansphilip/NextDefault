@@ -1,86 +1,74 @@
 # Next Ready
 
+Next ready is an auth management app ready, working with Next.js eco-system.
+
 ## Installation of the project (local)
 
-- Add an `.env` file with the following variables:
+- Install project dependencies
+  ```bash
+  pnpm install
+  ```
 
-  ### Database connection
-  [Prisma documentation](https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/introduction)\
-  `DATABASE_URL="your-database-connection-string"`
+- Initialize the database
 
-  ### Session secret
-  [Jose documentation](https://github.com/panva/jose)\
-  Generate 32 characters random encryption string, use `openssl rand -base64 32`\
-  `SESSION_SECRET="your-session-secret-generated-with-openssl"`
+  - Creates a database
+  ```sql
+  CREATE DATABASE `default-db`;
+  ```
 
-  ### Resend API config
-  [Resend documentation](https://resend.com/docs/dashboard/api-keys/introduction)\
-  `RESEND_API_KEY="your-resend-api-key-generated-with-resend-dashboard"`
+  - Selects the new database
+  ```sql
+  USE `default-db`;
+  ```
 
-  ### Resend parameters for this project
-  `Copy/paste` theses parameters into your `.env` file\
-  `RESEND_DOMAIN="https://domain.com"`
-  `RESEND_EMAIL="hello@domain.com"`
+  - Creates an user and a password
+  ```sql
+  CREATE USER 'default-user'@'localhost' IDENTIFIED BY 'default-password';
+  ```
 
-- `pnpm install`
-- `pnpx prisma generate`
-- `pnpx prisma migrate dev --name initial-migration`
+  - Allows user to connect to database
+  ```sql
+  GRANT ALL PRIVILEGES ON *.* TO 'default-user'@'localhost';
+  ```
 
+- Add an `.env` file at the root of the project, with the following variables
 
-## Creation of the project
+  - Database connection ([Prisma get started](https://www.prisma.io/docs/get-started/setup-prisma/start-from-scratch/relational-databases/mysql-mysql-ts))
+  > I use MySQL Prisma adapter, but you can use any other database supported by Prisma. Follow the [Prisma database drivers](https://www.prisma.io/docs/orm/overview/databases/database-drivers) to setup your database.
+  ```js
+  DATABASE_URL="mysql://default-user:default-password@localhost:3306/default-db"
+  ```
 
-1. **Install** [Next.js](https://nextjs.org/docs/getting-started/installation)
+  - Session secret ([Jose Docs](https://github.com/panva/jose))
 
-- `pnpx create-next-app@latest default-project --typescript --tailwind --eslint`
+  Generate 32 characters random string
+  ```bash
+  openssl rand -base64 32
+  ```
 
-1. **Install** [Prisma](https://www.prisma.io/docs/getting-started/quickstart) for MySQL
+  Use the generated string for the encryption key
+  ```js
+  SESSION_SECRET="your-session-secret-generated-with-openssl"
+  ```
 
-- `pnpm install prisma --save-dev`
+  - Resend API config ([Resend Docs](https://resend.com/docs/dashboard/api-keys/introduction))
+  ```js
+  RESEND_API_KEY="your-resend-api-key-generated-with-resend-dashboard"
+  ```
 
-- `pnpx prisma init --datasource-provider mysql`
-- **Add** `.env` file to `.gitignore`
+  - Other necessary variables
+  `Copy/paste` theses parameters into your `.env` file
+  ```js
+  RESEND_DOMAIN="https://domain.com"
+  RESEND_EMAIL="hello@domain.com"
+  ```
 
-- `pnpm install @prisma/client`
+- Generate the Prisma client
+  ```bash
+  pnpm prisma generate
+  ```
 
-- **Create** a `lib/prisma.ts` file to instantiate Prisma with this [Optimized singleton for Next.js](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices)
-
-1. **Create** and **initialize** a MySQL database
-
-- **Create** a database and an user with grants (see commands into `prisma/sql` file)
-- **Edit** database connection into `.env` file
-
-- `pnpx prisma migrate dev --name initial-migration`
-- A command to know : `pnpx prisma generate`, useful after `pnpm rebuild`
-
-1. **Install** utilities for Next.js
-
-- `pnpm install bcrypt`
-- `pnpm install --save-dev @types/bcrypt`
-
-- `pnpm install resend`
-
-- `pnpm install jose`
-
-- `pnpm install lucide-react`
-
-- `pnpm install ZodTypes`
-
-1. Plugin Tailwindcss
-
-- `pnpm install --save-dev eslint-plugin-tailwindcss`
-- Ajouter le code suivant dans `.eslintrc.json`:
-
-```json
-{
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:tailwindcss/recommended"
-  ],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js"],
-      "parser": "@typescript-eslint/parser"
-    }
-  ]
-}
-```
+- Run Prisma database migrations
+  ```bash
+  pnpm prisma migrate dev --name initial-migration
+  ```
