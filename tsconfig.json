@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    // "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      // "@/*": ["./*"],
+      "@app/*": ["./app/*"],
+      "@public/*": ["./public/*"],
+      "@prisma/*": ["./prisma/*"],
+      
+      "@cookies/*": ["./actions/cookies/*"],
+      "@lib/*": ["./actions/lib/*"],
+      "@auth/*": ["./actions/auth/*"],
+      "@core/*": ["./actions/core/*"],
+      "@database/*": ["./actions/database/*"],
+      "@utils/*": ["./actions/utils/*"],
+      
+      "@comps/*": ["./components/*"],
+      "@client/*": ["./components/client/*"],
+      "@server/*": ["./components/server/*"],
+      "@style/*": ["./components/style/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

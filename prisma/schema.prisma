@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @unique @default(cuid())
+
+  firstname String
+  lastname  String
+  image     String?
+
+  email         String    @unique
+  emailVerified DateTime?
+  newEmail      String?   @unique
+
+  phone         String?   @unique
+  phoneVerified DateTime?
+
+  password String
+  sessions Session[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Session {
+  id String @id @unique @default(cuid())
+
+  userId   String?
+  clientId String @unique
+  expires   DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User? @relation(fields: [userId], references: [id])
+}
+
+model Token {
+  id String @id @unique @default(cuid())
+
+  clientId String
+  email    String? @unique
+
+  token String    @unique
+  type  TokenType @default(VERIFY)
+  expires   DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum TokenType {
+  VERIFY
+  CSRF
+}
