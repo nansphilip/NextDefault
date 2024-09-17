@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation"
 import { useContext, useEffect, useRef, useState } from "react"
-import { Verify } from "@auth/Verify"
+import { Verify } from "@auth/verify"
 import { useRouter } from "next/navigation"
 import { CircleCheck, CircleAlert } from "lucide-react"
 import { SessionCookies } from "@lib/Types"

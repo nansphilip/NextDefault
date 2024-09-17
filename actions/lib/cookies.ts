@@ -1,6 +1,6 @@
 "use server"
 
-import { Decrypt, Encrypt } from "@utils/Jose"
+import { Decrypt, Encrypt } from "@utils/jose"
 import { cookies } from "next/headers"
 import { NextRequest, NextResponse } from "next/server"
 import {
@@ -8,7 +8,7 @@ import {
     DataCookieContent,
     DataCookies,
     UpdateSessionContent,
-} from "@lib/Types"
+} from "@lib/types"
 import { ResponseCookies } from "next/dist/compiled/@edge-runtime/cookies"
 
 /**

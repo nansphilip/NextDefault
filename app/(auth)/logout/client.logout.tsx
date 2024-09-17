@@ -2,7 +2,7 @@
 
 import { DestroySession, GetSession } from "@cookies/Session"
 import { DeleteSessionDB, SelectSessionDB } from "@database/Session"
-import { SessionCookies, SessionDatabase } from "@lib/Types"
+import { SessionCookies, SessionDatabase } from "@lib/types"
 import { useRouter } from "next/navigation"
 import { useEffect, useRef } from "react"
 

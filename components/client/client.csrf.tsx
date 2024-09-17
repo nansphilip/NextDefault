@@ -1,8 +1,8 @@
 "use client"
 
 import { Context } from "@app/client.context"
-import { CreateCsrf, UpdateCsrf } from "@cookies/Csrf"
-import { GenerateCsrfToken } from "@utils/Token"
+import { CreateCsrf, UpdateCsrf } from "@cookies/csrf"
+import { GenerateCsrfToken } from "@utils/token"
 import { useRouter } from "next/navigation"
 import { useContext, useEffect } from "react"
 

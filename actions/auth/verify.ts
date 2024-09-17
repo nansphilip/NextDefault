@@ -3,10 +3,10 @@
 import { SelectUser, UpdateUserEmailVerified } from "@database/User"
 import { DeleteToken, SelectToken } from "@database/Token"
 import { GetSession, UpdateSession } from "@cookies/Session"
-import { GenerateVerifyToken } from "@utils/Token"
-import { SendEmail } from "@utils/Resend"
+import { GenerateVerifyToken } from "@utils/token"
+import { SendEmail } from "@utils/resend"
 import { z } from "zod"
-import { ZodTypes, ZodParse } from "@utils/Zod"
+import { ZodTypes, ZodParse } from "@utils/zod"
 
 /**
  * Verifies an email

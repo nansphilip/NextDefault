@@ -3,10 +3,10 @@
 import { CreateSession } from "@cookies/Session"
 import { DeleteAllCsrfTokens, DeleteToken, SelectAllTokens, SelectToken } from "@database/Token"
 import { SelectUser } from "@database/User"
-import { ComparePassword } from "@utils/Bcrypt"
+import { ComparePassword } from "@utils/bcrypt"
 import { z } from "zod"
-import { ZodTypes, ZodParse } from "@utils/Zod"
-import { DestroyCsrf, GetCsrf } from "@cookies/Csrf"
+import { ZodTypes, ZodParse } from "@utils/zod"
+import { DestroyCsrf, GetCsrf } from "@cookies/csrf"
 import { CreateSessionDB } from "@database/Session"
 
 /**

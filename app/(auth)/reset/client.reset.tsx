@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation"
 import { useContext, useEffect, useState } from "react"
-import { ResetLink, ResetPassword } from "@auth/Reset"
+import { ResetLink, ResetPassword } from "@auth/reset"
 import FormFeedback from "@server/form-feedback"
 import Loader from "@server/loader"
 import { FormEvent } from "react"

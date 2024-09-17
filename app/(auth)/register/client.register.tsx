@@ -1,6 +1,6 @@
 "use client"
 
-import { Register } from "@auth/Register"
+import { Register } from "@auth/register"
 import { FormEvent, useContext, useEffect, useState } from "react"
 import Loader from "@server/loader"
 import FormFeedback from "@server/form-feedback"

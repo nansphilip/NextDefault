@@ -1,7 +1,7 @@
 "use client"
 
 import { Context } from "@app/client.context"
-import { ResendEmail } from "@auth/Update"
+import { ResendEmail } from "@auth/update"
 import Button from "@comps/ui/button"
 import { useRouter } from "next/navigation"
 import { useContext, useState } from "react"

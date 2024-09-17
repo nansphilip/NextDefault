@@ -2,12 +2,12 @@
 
 import { DeleteAllCsrfTokens, DeleteToken, SelectAllTokens, SelectToken } from "@database/Token"
 import { SelectUser, UpdateUserPassword } from "@database/User"
-import { HashPassword } from "@utils/Bcrypt"
-import { SendEmail } from "@utils/Resend"
-import { GenerateVerifyToken } from "@utils/Token"
+import { HashPassword } from "@utils/bcrypt"
+import { SendEmail } from "@utils/resend"
+import { GenerateVerifyToken } from "@utils/token"
 import { z } from "zod"
-import { ZodTypes, ZodParse } from "@utils/Zod"
-import { DestroyCsrf, GetCsrf } from "@cookies/Csrf"
+import { ZodTypes, ZodParse } from "@utils/zod"
+import { DestroyCsrf, GetCsrf } from "@cookies/csrf"
 
 /**
  * Sends a reset link

@@ -1,6 +1,6 @@
 "use client"
 
-import { CreateClient } from "@cookies/Client"
+import { CreateClient } from "@cookies/client"
 import { ClientCookies } from "@lib/Types"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
