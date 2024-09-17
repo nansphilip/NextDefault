@@ -1,6 +1,6 @@
 "use client"
 
-import { UserDatabase } from "@lib/Types"
+import { UserDatabase } from "@lib/types"
 import { use } from "react"
 
 export default function DashboardClient({ promise }: {

@@ -5,7 +5,7 @@ import { useContext, useEffect, useRef, useState } from "react"
 import { Verify } from "@auth/verify"
 import { useRouter } from "next/navigation"
 import { CircleCheck, CircleAlert } from "lucide-react"
-import { SessionCookies } from "@lib/Types"
+import { SessionCookies } from "@lib/types"
 import { Context } from "@app/client.context"
 
 export default function VerifyClient({ session }: {

@@ -1,6 +1,6 @@
 "use client"
 
-import { ClientCookies } from "@lib/Types"
+import { ClientCookies } from "@lib/types"
 import { createContext } from "react"
 
 export const Context = createContext<ClientCookies | null>(null)

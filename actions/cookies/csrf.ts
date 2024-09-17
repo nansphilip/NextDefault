@@ -1,5 +1,5 @@
-import { CreateCookie, DestroyCookie, GetCookie, UpdateCookie } from "@lib/Cookies"
-import { CsrfCookies } from "@lib/Types"
+import { CreateCookie, DestroyCookie, GetCookie, UpdateCookie } from "@lib/cookies"
+import { CsrfCookies } from "@lib/types"
 
 /**
  * Creates a CSRF cookie

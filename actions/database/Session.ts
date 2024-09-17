@@ -1,7 +1,7 @@
 "use server"
 
-import Prisma from "@lib/Prisma"
-import { SessionDatabase } from "@lib/Types"
+import Prisma from "@lib/prisma"
+import { SessionDatabase } from "@lib/types"
 
 /**
  * Creates a session
