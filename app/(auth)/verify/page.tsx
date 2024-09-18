@@ -1,5 +1,5 @@
 import VerifyClient from "@app/(auth)/verify/client.verify"
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import Button from "@comps/ui/button"
 
 export default async function VerifyPage() {

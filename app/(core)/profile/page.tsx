@@ -1,9 +1,9 @@
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import ProfileClient from "@app/(core)/profile/client.profile"
 import ResendButtonClient from "@app/(core)/profile/client.resend"
 import { CircleCheck, CircleAlert, KeyRound } from "lucide-react"
 import { SelectAllSessionDB } from "@database/Session"
-import { GetClient } from "@cookies/Client"
+import { GetClient } from "@cookies/client"
 import { redirect } from "next/navigation"
 
 export default async function ProfilePage() {

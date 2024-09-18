@@ -1,7 +1,7 @@
 "use server"
 
-import Prisma from "@lib/Prisma"
-import { UserDatabase } from "@lib/Types"
+import Prisma from "@lib/prisma"
+import { UserDatabase } from "@lib/types"
 
 /**
  * Create a new user in the database

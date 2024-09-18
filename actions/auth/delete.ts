@@ -1,10 +1,10 @@
 "use server"
 
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import { DeleteUser, SelectUser } from "@database/User"
-import { ComparePassword } from "@utils/Bcrypt"
+import { ComparePassword } from "@utils/bcrypt"
 import { z } from "zod"
-import { ZodTypes, ZodParse } from "@utils/Zod"
+import { ZodTypes, ZodParse } from "@utils/zod"
 import { DeleteAllTokens, SelectAllTokens } from "@database/Token"
 
 /**

@@ -1,7 +1,7 @@
 "use server"
 
-import Prisma from "@lib/Prisma"
-import { TokenDatabase } from "@lib/Types"
+import Prisma from "@lib/prisma"
+import { TokenDatabase } from "@lib/types"
 
 /**
  * Creates a token

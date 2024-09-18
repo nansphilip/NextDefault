@@ -1,4 +1,4 @@
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import ResetClient from "@app/(auth)/reset/client.reset"
 
 export default async function ResetPage() {

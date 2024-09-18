@@ -1,4 +1,4 @@
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import { redirect } from "next/navigation"
 import CenterStartLayoutClient from "@client/client.center-start-layout";
 

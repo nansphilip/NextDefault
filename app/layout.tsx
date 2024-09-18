@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "@style/globals.css"
 import HeaderClient from "@client/client.header"
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import ClientCookie from "@client/client.cookie"
-import { GetClient } from "@cookies/Client"
+import { GetClient } from "@cookies/client"
 import ClientContext from "@app/client.context"
 
 

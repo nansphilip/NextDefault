@@ -1,4 +1,4 @@
-import { GetSession, DestroySession } from "@cookies/Session"
+import { GetSession, DestroySession } from "@cookies/session"
 import { CircleCheck, CircleAlert } from "lucide-react"
 import TimerClient from "@app/(core)/dashboard/client.timer"
 import DashboardClient from "@app/(core)/dashboard/client.dashboard"

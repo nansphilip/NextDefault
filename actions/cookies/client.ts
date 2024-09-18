@@ -1,8 +1,8 @@
 "use server"
 
-import { CreateCookie, GetCookie } from "@lib/Cookies"
+import { CreateCookie, GetCookie } from "@lib/cookies"
 import { randomBytes } from 'crypto'
-import { ClientCookies } from "@lib/Types"
+import { ClientCookies } from "@lib/types"
 
 /**
  * Creates a client

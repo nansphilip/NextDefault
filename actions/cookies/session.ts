@@ -1,8 +1,8 @@
 "use server"
 
 import { NextRequest } from "next/server"
-import { SessionCookieContent, SessionCookies, UpdateSessionContent } from "@lib/Types"
-import { CreateCookie, DestroyCookie, GetCookie, RefreshCookie, UpdateCookie } from "@lib/Cookies"
+import { SessionCookieContent, SessionCookies, UpdateSessionContent } from "@lib/types"
+import { CreateCookie, DestroyCookie, GetCookie, RefreshCookie, UpdateCookie } from "@lib/cookies"
 
 /**
  * Creates a session

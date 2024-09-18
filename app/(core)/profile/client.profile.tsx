@@ -1,7 +1,7 @@
 "use client"
 
-import { UpdateEmail, UpdateName, UpdatePassword } from "@auth/Update"
-import { DeleteAccount } from "@auth/Delete"
+import { UpdateEmail, UpdateName, UpdatePassword } from "@auth/update"
+import { DeleteAccount } from "@auth/delete"
 import { FormEvent, useContext, useState } from "react"
 import Loader from "@server/loader"
 import FormFeedback from "@server/form-feedback"

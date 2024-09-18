@@ -1,11 +1,11 @@
 "use client"
 
-import { Login } from "@auth/Login"
+import { Login } from "@auth/login"
 import { FormEvent, useContext, useEffect, useState } from "react"
 import Loader from "@server/loader"
 import FormFeedback from "@server/form-feedback"
 import { useRouter } from "next/navigation"
-import { SessionCookies } from "@lib/Types"
+import { SessionCookies } from "@lib/types"
 import CsrfFormClient from "@comps/client/client.csrf"
 import { Context } from "@app/client.context"
 import Button from "@comps/ui/button"

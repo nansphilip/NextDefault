@@ -2,7 +2,7 @@
 
 import SlidingHoverClient from "@client/client.sliding-motion"
 import { usePathname } from "next/navigation"
-import { SessionCookies } from "@lib/Types"
+import { SessionCookies } from "@lib/types"
 import Button from "@comps/ui/button"
 
 export default function HeaderClient({ session }: {

@@ -1,6 +1,6 @@
 import LoginClient from "@app/(auth)/login/client.login"
 import Button from "@comps/ui/button"
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 
 export default async function LoginPage() {
 

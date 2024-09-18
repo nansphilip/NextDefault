@@ -1,14 +1,14 @@
 "use server"
 
-import { GenerateVerifyToken } from "@utils/Token"
-import { SendEmail } from "@utils/Resend"
+import { GenerateVerifyToken } from "@utils/token"
+import { SendEmail } from "@utils/resend"
 import { CreateUser, SelectUser } from "@database/User"
-import { HashPassword } from "@utils/Bcrypt"
-import { CreateSession } from "@cookies/Session"
+import { HashPassword } from "@utils/bcrypt"
+import { CreateSession } from "@cookies/session"
 import { z } from "zod"
-import { ZodTypes, ZodParse } from "@utils/Zod"
+import { ZodTypes, ZodParse } from "@utils/zod"
 import { DeleteAllCsrfTokens, DeleteToken, SelectAllTokens, SelectToken } from "@database/Token"
-import { DestroyCsrf, GetCsrf } from "@cookies/Csrf"
+import { DestroyCsrf, GetCsrf } from "@cookies/csrf"
 import { CreateSessionDB } from "@database/Session"
 
 /**

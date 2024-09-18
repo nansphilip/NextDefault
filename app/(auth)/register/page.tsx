@@ -1,5 +1,5 @@
 import RegisterClient from "@app/(auth)/register/client.register"
-import { GetSession } from "@cookies/Session"
+import { GetSession } from "@cookies/session"
 import PasswordInputClient from "@comps/client/client.password"
 import Button from "@comps/ui/button"
 

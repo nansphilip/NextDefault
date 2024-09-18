@@ -1,6 +1,6 @@
 "use client"
 
-import { SessionCookies } from "@lib/Types"
+import { SessionCookies } from "@lib/types"
 import { useEffect, useState } from "react"
 
 export default function TimerClient({ session, className, sessionData, text }: {
