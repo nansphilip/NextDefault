@@ -7,7 +7,6 @@ import { GenerateVerifyToken } from "@utils/token"
 import { SendEmail } from "@utils/resend"
 import { z } from "zod"
 import { ZodTypes, ZodParse } from "@utils/zod"
-import { ZodTypes, ZodParse } from "@utils/zod"
 
 /**
  * Verifies an email

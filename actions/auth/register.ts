@@ -2,16 +2,12 @@
 
 import { GenerateVerifyToken } from "@utils/token"
 import { SendEmail } from "@utils/resend"
-import { GenerateVerifyToken } from "@utils/token"
-import { SendEmail } from "@utils/resend"
 import { CreateUser, SelectUser } from "@database/User"
 import { HashPassword } from "@utils/bcrypt"
 import { CreateSession } from "@cookies/session"
 import { z } from "zod"
 import { ZodTypes, ZodParse } from "@utils/zod"
-import { ZodTypes, ZodParse } from "@utils/zod"
 import { DeleteAllCsrfTokens, DeleteToken, SelectAllTokens, SelectToken } from "@database/Token"
-import { DestroyCsrf, GetCsrf } from "@cookies/csrf"
 import { DestroyCsrf, GetCsrf } from "@cookies/csrf"
 import { CreateSessionDB } from "@database/Session"
 
